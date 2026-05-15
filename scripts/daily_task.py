@@ -66,5 +66,41 @@ def main():
     print(f"✅ Raw data saved: {json_path}")
     print(f"📊 Found {len(all_results)} papers")
 
+def auto_push():
+    """自动推送更改到 GitHub"""
+    try:
+        os.chdir(BASE_DIR)
+        
+        # 检查是否有更改
+        result = subprocess.run(
+            ["git", "status", "--porcelain"],
+            capture_output=True,
+            text=True
+        )
+        
+        if not result.stdout.strip():
+            print("📦 没有需要推送的更改")
+            return
+        
+        # 添加所有更改
+        subprocess.run(["git", "add", "-A"], check=True)
+        
+        # 提交
+        today = datetime.now().strftime("%Y-%m-%d")
+        subprocess.run(
+            ["git", "commit", "-m", f"Daily update: {today}"],
+            check=True
+        )
+        
+        # 推送
+        subprocess.run(["git", "push", "origin", "main"], check=True)
+        print(f"🚀 已自动推送到 GitHub: {today}")
+        
+    except subprocess.CalledProcessError as e:
+        print(f"⚠️ Git push 失败: {e}")
+    except Exception as e:
+        print(f"⚠️ Auto push error: {e}")
+
 if __name__ == "__main__":
     main()
+    auto_push()
