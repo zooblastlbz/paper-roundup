@@ -3,8 +3,13 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:  # 手动触发
   schedule:
-    - cron: '0 9 * * *'  # 每天上午9点
+    - cron: '0 1 * * *'  # 每天 UTC 1:00 (北京时间 9:00)
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -28,3 +33,8 @@ jobs:
       
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
+        id: deployment
+      
+      - name: Output deployment URL
+        run: |
+          echo "🌐 Site deployed to: ${{ steps.deployment.outputs.page_url }}"
