@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Roundup - 每日论文汇总</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>📚 Paper Roundup</h1>
+        <p>每日 AI/ML 论文精选</p>
+    </header>
+
+    <main>
+        <section class="stats">
+            <h2>📊 统计</h2>
+            <div class="stat-cards" id="stats-container">
+                <div class="stat-card">
+                    <span class="stat-number" id="total-papers">-</span>
+                    <span class="stat-label">总论文数</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="total-days">-</span>
+                    <span class="stat-label">累计天数</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="last-update">-</span>
+                    <span class="stat-label">最后更新</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="latest">
+            <h2>🔥 最新推荐</h2>
+            <div id="latest-papers"></div>
+        </section>
+
+        <section class="archive">
+            <h2>📅 历史归档</h2>
+            <div id="archive-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>自动更新于每日 9:00 | <a href="https://github.com/zooblastlbz/paper-roundup">GitHub</a></p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
