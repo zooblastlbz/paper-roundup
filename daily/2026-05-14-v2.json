@@ -1,0 +1,170 @@
+{
+  "date": "2026-05-14",
+  "sources": {
+    "arxiv": {
+      "status": "success",
+      "total_scanned": 50,
+      "method": "quark_search_api"
+    },
+    "huggingface": {
+      "status": "partial",
+      "method": "news_search",
+      "note": "Direct access failed due to network restrictions"
+    },
+    "paperswithcode": {
+      "status": "partial",
+      "method": "news_search",
+      "note": "Direct access failed due to network restrictions"
+    }
+  },
+  "stats": {
+    "total_papers": 12,
+    "hot_papers_count": 5,
+    "interesting_papers_count": 4,
+    "by_category": {
+      "multimodal_llm": 3,
+      "agentic_ai": 6,
+      "post_training": 1,
+      "world_models": 1,
+      "visual_generation": 2
+    }
+  },
+  "hot_papers": [
+    {
+      "id": "guardad-mllm-safety",
+      "title": "GuardAD: Safeguarding Autonomous Driving MLLMs via Markovian Safety Logic",
+      "arxiv_id": "(arXiv cs.AI, 2026-05-12)",
+      "url": "https://arxiv.org/list/cs.AI/pastweek",
+      "categories": ["cs.AI", "cs.CV"],
+      "abstract": "提出基于马尔可夫安全逻辑的自动驾驶多模态大模型安全保障框架，解决MLLM在自动驾驶场景中的安全性和可靠性问题。",
+      "keywords": ["MLLM", "Autonomous Driving", "Safety", "Multimodal"],
+      "source": "arxiv",
+      "heat": "trending",
+      "why_hot": "自动驾驶MLLM安全是热点，结合了多模态与世界模型概念"
+    },
+    {
+      "id": "egl-sca-graph-agent",
+      "title": "EGL-SCA: Structural Credit Assignment for Co-Evolving Instructions and Tools in Graph Reasoning Agents",
+      "arxiv_id": "(arXiv cs.AI, 2026-05-12)",
+      "url": "https://arxiv.org/list/cs.AI/pastweek",
+      "categories": ["cs.AI"],
+      "abstract": "提出结构信用分配机制，用于图推理智能体中指令和工具的协同进化，解决了复杂推理场景中的工具选择和指令优化问题。",
+      "keywords": ["Graph Reasoning", "Agent", "Tool Use", "Credit Assignment"],
+      "source": "arxiv",
+      "heat": "trending",
+      "why_hot": "Agentic AI核心问题——工具使用与推理的协同优化"
+    },
+    {
+      "id": "spacemind-video-worldmodel",
+      "title": "SpaceMind++: Toward Allocentric Cognitive Maps for Spatially Grounded Video MLLMs",
+      "arxiv_id": "(arXiv cs.CV, 14 pages)",
+      "url": "https://arxiv.org/list/cs.CV/recent",
+      "categories": ["cs.CV", "cs.CL"],
+      "abstract": "构建以物体为中心的认知地图，为视频多模态大模型提供空间 grounding 能力，结合了世界模型与视频理解。",
+      "keywords": ["Video MLLM", "Cognitive Maps", "Spatial Grounding", "World Models"],
+      "source": "arxiv",
+      "heat": "trending",
+      "why_hot": "视频MLLM + 世界模型 + 空间认知，跨领域创新"
+    },
+    {
+      "id": "verifiable-process-rewards",
+      "title": "Verifiable Process Rewards for Agentic Reasoning",
+      "arxiv_id": "(arXiv cs.AI, 2026-05-12)",
+      "url": "https://arxiv.org/list/cs.AI/pastweek",
+      "categories": ["cs.AI"],
+      "abstract": "提出可验证的过程奖励机制，用于Agentic推理场景，提升推理过程的可解释性和可靠性。",
+      "keywords": ["Agentic Reasoning", "Process Rewards", "Verifiable", "RL"],
+      "source": "arxiv",
+      "heat": "trending",
+      "why_hot": "Agentic AI核心——推理过程的可验证奖励设计"
+    },
+    {
+      "id": "tmas-multiagent-testtime",
+      "title": "TMAS: Scaling Test-Time Compute via Multi-Agent Synergy",
+      "arxiv_id": "(arXiv cs.AI, 2026-05-12)",
+      "url": "https://arxiv.org/list/cs.AI/pastweek",
+      "categories": ["cs.AI"],
+      "abstract": "通过多智能体协同扩展测试时计算，提出了一种新的推理时扩展范式，不依赖单一模型的规模增长。",
+      "keywords": ["Test-Time Compute", "Multi-Agent", "Scaling", "Reasoning"],
+      "source": "arxiv",
+      "heat": "trending",
+      "why_hot": "测试时计算扩展是热点，多智能体协同是新思路"
+    }
+  ],
+  "interesting_papers": [
+    {
+      "id": "quest-semantic-monitors",
+      "title": "QueST: Persistent Queries as Semantic Monitors for Drift Suppression in Long-Horizon Tracking",
+      "arxiv_id": "(arXiv cs.CV, Accepted to ICML 2026)",
+      "url": "https://arxiv.org/list/cs.CV/recent",
+      "categories": ["cs.CV", "cs.RO"],
+      "abstract": "提出持久查询作为语义监控器，用于长时程跟踪中的漂移抑制，通过语义层面的持续验证提升跟踪稳定性。",
+      "keywords": ["Long-Horizon Tracking", "Semantic Monitors", "Drift Suppression"],
+      "source": "arxiv",
+      "why_interesting": "将语义监控与长时程跟踪结合，思路新颖"
+    },
+    {
+      "id": "swift-prompt-adaptive",
+      "title": "SWIFT: Prompt-Adaptive Memory for Efficient Interactive Long Video Generation",
+      "arxiv_id": "(arXiv cs.CV, Code available)",
+      "url": "https://arxiv.org/list/cs.CV/recent",
+      "categories": ["cs.CV"],
+      "abstract": "提出提示自适应记忆机制，用于高效交互式长视频生成，支持代码已开源。",
+      "keywords": ["Video Generation", "Prompt-Adaptive", "Memory", "Interactive"],
+      "source": "arxiv",
+      "why_interesting": "交互式长视频生成+自适应记忆，有开源代码"
+    },
+    {
+      "id": "offline-preference-rectified",
+      "title": "Offline Preference Optimization for Rectified Flow with Noise-Tracked Pairs",
+      "arxiv_id": "(arXiv cs.CV, Accepted by ICML 2026)",
+      "url": "https://arxiv.org/list/cs.CV/recent",
+      "categories": ["cs.CV", "cs.AI"],
+      "abstract": "针对Rectified Flow的离线偏好优化方法，通过噪声追踪对进行训练，ICML 2026接收。",
+      "keywords": ["Preference Optimization", "Rectified Flow", "DPO", "Diffusion"],
+      "source": "arxiv",
+      "why_interesting": "扩散模型+DPO的结合，ICML接收说明质量高"
+    },
+    {
+      "id": "permuquant-diffusion",
+      "title": "PermuQuant: Lowering Per-Group Quantization Error by Reordering Channels for Diffusion Models",
+      "arxiv_id": "(arXiv cs.CV, 2026-05-13)",
+      "url": "https://arxiv.org/list/cs.CV/recent",
+      "categories": ["cs.CV"],
+      "abstract": "通过通道重排序降低扩散模型的分组量化误差，为扩散模型的高效部署提供新思路。",
+      "keywords": ["Quantization", "Diffusion Models", "Channel Reordering", "Efficiency"],
+      "source": "arxiv",
+      "why_interesting": "扩散模型量化是工程落地关键问题"
+    }
+  ],
+  "other_notable": [
+    {
+      "title": "Agent-X: Full Pipeline Acceleration of On-device AI Agents",
+      "note": "端侧AI智能体全流程加速，MobiSys 2026接收",
+      "category": "Agentic AI"
+    },
+    {
+      "title": "How Mobile World Model Guides GUI Agents?",
+      "note": "移动世界模型指导GUI智能体",
+      "category": "World Models + Agentic AI"
+    },
+    {
+      "title": "EmbodiSkill: Skill-Aware Reflection for Self-Evolving Embodied Agents",
+      "note": "具身智能体的技能感知反思",
+      "category": "Agentic AI"
+    },
+    {
+      "title": "Agent-ValueBench: A Comprehensive Benchmark for Evaluating Agent Values",
+      "note": "智能体价值评估基准",
+      "category": "Agentic AI"
+    }
+  ],
+  "hf_method": "news_search_indirect",
+  "pwc_method": "news_search_indirect",
+  "summary": {
+    "agentic_ai_trend": "本周Agentic AI论文数量最多(6篇)，涵盖工具使用、多智能体协同、推理验证、端侧部署等方向",
+    "multimodal_worldmodel_convergence": "多模态MLLM与世界模型概念正在融合，SpaceMind++和GuardAD都体现了这一趋势",
+    "test_time_compute": "TMAS等工作探索测试时计算的新扩展范式，不单纯依赖模型规模",
+    "diffusion_optimization": "扩散模型相关研究聚焦效率优化(量化、偏好优化)"
+  }
+}

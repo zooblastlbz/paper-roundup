@@ -1,0 +1,77 @@
+{
+  "date": "2026-05-13",
+  "hot_papers": [
+    {
+      "title": "dWorldEval: Scalable Robotic Policy Evaluation via Discrete Diffusion World Model",
+      "title_zh": "dWorldEval：基于离散扩散世界模型的可扩展机器人策略评估",
+      "authors": "Current Robotics Team",
+      "institution": "ICML 2026 Spotlight",
+      "link": "https://arxiv.org/pdf/2604.22152",
+      "summary": "提出了一种机器人原生的世界模型评测框架，通过离散扩散世界模型实现可扩展的机器人策略评估。与WorldEval相比，dWorldEval强调世界模型应该呈现失败而非美化策略输出，为机器人策略评测提供了新的范式。",
+      "rating": "⭐⭐⭐",
+      "tags": ["世界模型", "机器人", "扩散模型", "策略评估"]
+    },
+    {
+      "title": "Turning Drift into Constraint: Robust Reasoning Alignment in Non-Stationary Multi-Stream Environments",
+      "title_zh": "将漂移转化为约束：非平稳多流环境中的鲁棒推理对齐",
+      "authors": "Xiaoyu Yang, En Yu, Wei Duan, Jie Lu",
+      "institution": "悉尼科技大学(UTS)澳大利亚人工智能研究院(AAII)",
+      "link": "https://arxiv.org/abs/ICML2026",
+      "summary": "提出APO(Autonomous Preference Optimization)自主偏好优化框架，解决多模态大模型多教师蒸馏中的概念漂移问题。通过将漂移转化为动态负约束、共识视为正向偏好引导，系统性地解决了多源推理分布动态演变导致的偏差传递问题。",
+      "rating": "⭐⭐⭐",
+      "tags": ["多模态", "DPO", "知识蒸馏", "对齐", "ICML 2026"]
+    },
+    {
+      "title": "BLT Diffusion: Byte-Level AI for Parallel Generation",
+      "title_zh": "BLT扩散模型：字节级AI实现并行生成突破",
+      "authors": "Meta FAIR, Stanford University, University of Washington",
+      "institution": "Meta FAIR / Stanford / UW",
+      "link": "https://arxiv.org/abs/2605.08044",
+      "summary": "突破字节级语言模型逐字节生成的瓶颈，实现整块并行释放。BLT-D模型直接对原始字节处理，绕开词汇切割门槛，同时解决了字节级模型长期以来速度太慢的问题，为多语言和多模态生成提供了更公平的基础。",
+      "rating": "⭐⭐⭐",
+      "tags": ["扩散模型", "字节级模型", "语言模型", "并行生成"]
+    },
+    {
+      "title": "LDA-1B: Latent Dynamics Action Model for Heterogeneous Embodied Data",
+      "title_zh": "LDA-1B：面向异构具身数据的潜在动力学动作模型",
+      "authors": "PKU EPIC Lab",
+      "institution": "北京大学",
+      "link": "https://arxiv.org/abs/2602.12215",
+      "summary": "统一世界模型框架，让机器人从大量质量参差、来源复杂、标注不完整的数据中持续学习世界如何变化。通过潜在空间联合学习动力学和动作，支持视觉预测、动作生成和世界建模的统一训练。",
+      "rating": "⭐⭐",
+      "tags": ["具身智能", "世界模型", "机器人", "动作模型"]
+    },
+    {
+      "title": "SmileyLlama: Chemical Space Navigator for Molecular Discovery",
+      "title_zh": "SmileyLlama：面向分子发现的大语言模型化学空间导航器",
+      "authors": "Research Team",
+      "institution": "Nature Computational Science",
+      "link": "https://arxiv.org/abs/nat.comput.sci",
+      "summary": "基于Meta-Llama-3.1-8B-Instruct构建的化学空间探索模型，通过SFT和DPO使LLM直接生成满足特定药物化学性质的SMILES分子。在Lipinski rule-of-five任务中，DPO将准确率从81-89%提升至97-99%。",
+      "rating": "⭐⭐",
+      "tags": ["DPO", "科学发现", "分子生成", "LLM应用"]
+    }
+  ],
+  "interesting_papers": [
+    {
+      "title": "AI推理不只靠"多练"，更要"练对" - RL训练逻辑丰富度研究",
+      "title_zh": "AI推理训练的秘密武器：逻辑的丰富度",
+      "authors": "Purdue University, UNC Chapel Hill, Georgia Tech, UCSD",
+      "institution": "普渡大学等",
+      "link": "https://arxiv.org/abs/2605.06638",
+      "summary": "研究发现强化学习训练LLM时，逻辑丰富度比简单重复训练更重要。在长链推理任务中，即使每个小步骤单独来看AI都会做，但把它们串起来后表现会急剧下降。研究揭示了RL训练中的关键瓶颈。",
+      "rating": "⭐⭐",
+      "tags": ["强化学习", "推理", "LLM训练", "逻辑推理"]
+    },
+    {
+      "title": "AGI案例研究：今日LLM已达标",
+      "title_zh": "AGI已经交付？年度最不安论文",
+      "authors": "Multiple Scholars",
+      "institution": "Various Institutions",
+      "link": "https://arxiv.org/abs/agi-case-study",
+      "summary": "四位来自不同顶尖领域的学者联名发表论文，提出按照旧标准AGI早已存在。Codex在科研任务中展现出40倍效率提升（博士80小时任务AI不到2小时完成），引发对AGI定义和评估标准的深刻反思。",
+      "rating": "⭐⭐",
+      "tags": ["AGI", "智能体", "科研自动化", "AI评估"]
+    }
+  ]
+}

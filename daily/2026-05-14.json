@@ -1,0 +1,168 @@
+{
+  "date": "2026-05-14",
+  "sources": {
+    "arxiv": {
+      "total_fetched": 80,
+      "filtered": 44,
+      "note": "cs.CL, cs.CV, cs.LG, cs.AI, cs.MM, cs.GR"
+    },
+    "huggingface": {
+      "total_fetched": 0,
+      "filtered": 0,
+      "note": "API timeout - network restricted"
+    },
+    "paperswithcode": {
+      "total_fetched": 0,
+      "filtered": 0,
+      "note": "API timeout - network restricted"
+    }
+  },
+  "hot_papers": [
+    {
+      "title": "RoboEvolve: Co-Evolving Planner-Simulator for Robotic Manipulation with Limited Data",
+      "authors": [
+        "Harold Haodong Chen",
+        "Sirui Chen",
+        "Yingjie Xu"
+      ],
+      "link": "https://arxiv.org/abs/2605.13775v1",
+      "pdf_link": "https://arxiv.org/pdf/2605.13775v1",
+      "summary": "The scalability of robotic manipulation is fundamentally bottlenecked by the scarcity of task-aligned physical interaction data. While vision-language models (VLMs) and video generation models (VGMs) hold promise for autonomous data synthesis, they suffer from semantic-spatial misalignment and physi...",
+      "areas": [
+        "multimodal",
+        "agentic",
+        "post_training",
+        "generation"
+      ],
+      "source": "arxiv",
+      "heat": "trending"
+    },
+    {
+      "title": "Realtime-VLA FLASH: Speculative Inference Framework for Diffusion-based VLAs",
+      "authors": [
+        "Jiahui Niu",
+        "Kefan Gu",
+        "Yucheng Zhao"
+      ],
+      "link": "https://arxiv.org/abs/2605.13778v1",
+      "pdf_link": "https://arxiv.org/pdf/2605.13778v1",
+      "summary": "Diffusion-based vision-language-action models (dVLAs) are promising for embodied intelligence but are fundamentally limited in real-time deployment by the high latency of full inference. We propose Realtime-VLA FLASH, a speculative inference framework that eliminates most full inference calls during...",
+      "areas": [
+        "multimodal",
+        "agentic",
+        "generation"
+      ],
+      "source": "arxiv",
+      "heat": "trending"
+    },
+    {
+      "title": "R-DMesh: Video-Guided 3D Animation via Rectified Dynamic Mesh Flow",
+      "authors": [
+        "Zijie Wu",
+        "Lixin Xu",
+        "Puhua Jiang"
+      ],
+      "link": "https://arxiv.org/abs/2605.13838v1",
+      "pdf_link": "https://arxiv.org/pdf/2605.13838v1",
+      "summary": "Video-guided 3D animation holds immense potential for content creation, offering intuitive and precise control over dynamic assets. However, practical deployment faces a critical yet frequently overlooked hurdle: the pose misalignment dilemma. In real-world scenarios, the initial pose of a user-prov...",
+      "areas": [
+        "post_training",
+        "generation"
+      ],
+      "source": "arxiv",
+      "heat": "trending"
+    },
+    {
+      "title": "Unlocking Patch-Level Features for CLIP-Based Class-Incremental Learning",
+      "authors": [
+        "Hao Sun",
+        "Zi-Jun Ding",
+        "Da-Wei Zhou"
+      ],
+      "link": "https://arxiv.org/abs/2605.13835v1",
+      "pdf_link": "https://arxiv.org/pdf/2605.13835v1",
+      "summary": "Class-Incremental Learning (CIL) enables models to continuously integrate new knowledge while mitigating catastrophic forgetting. Driven by the remarkable generalization of CLIP, leveraging pre-trained vision-language models has become a dominant paradigm in CIL. However, current work primarily focu...",
+      "areas": [
+        "multimodal",
+        "post_training"
+      ],
+      "source": "arxiv",
+      "heat": "trending"
+    },
+    {
+      "title": "Training Long-Context Vision-Language Models Effectively with Generalization Beyond 128K Context",
+      "authors": [
+        "Zhaowei Wang",
+        "Lishu Luo",
+        "Haodong Duan"
+      ],
+      "link": "https://arxiv.org/abs/2605.13831v1",
+      "pdf_link": "https://arxiv.org/pdf/2605.13831v1",
+      "summary": "Long-context modeling is becoming a core capability of modern large vision-language models (LVLMs), enabling sustained context management across long-document understanding, video analysis, and multi-turn tool use in agentic workflows. Yet practical training recipes remain insufficiently explored, p...",
+      "areas": [
+        "multimodal",
+        "agentic"
+      ],
+      "source": "arxiv",
+      "heat": "trending"
+    }
+  ],
+  "interesting_papers": [
+    {
+      "title": "OmniLiDAR: A Unified Diffusion Framework for Multi-Domain 3D LiDAR Generation",
+      "authors": [
+        "Youquan Liu",
+        "Weidong Yang",
+        "Ao Liang"
+      ],
+      "link": "https://arxiv.org/abs/2605.13815v1",
+      "pdf_link": "https://arxiv.org/pdf/2605.13815v1",
+      "summary": "LiDAR scene generation is increasingly important for scalable simulation and synthetic data creation, especially under diverse sensing conditions that are costly to capture at scale. Typically, diffusion-based LiDAR generators are developed under single-domain settings, requiring separate models for...",
+      "areas": [
+        "generation"
+      ],
+      "source": "arxiv"
+    },
+    {
+      "title": "Force-Aware Neural Tangent Kernels for Scalable and Robust Active Learning of MLIPs",
+      "authors": [
+        "Eszter Varga-Umbrich",
+        "Zachary Weller-Davies",
+        "Paul Duckworth"
+      ],
+      "link": "https://arxiv.org/abs/2605.13788v1",
+      "pdf_link": "https://arxiv.org/pdf/2605.13788v1",
+      "summary": "Active learning for machine-learning interatomic potentials (MLIPs) must address several challenges to be practical: scaling to large candidate pools, leveraging energy-force supervision, and maintaining robustness when candidate pools are biased relative to the target distribution. In this work, we...",
+      "areas": [
+        "multimodal"
+      ],
+      "source": "arxiv"
+    },
+    {
+      "title": "GHGbench: A Unified Multi-Entity, Multi-Task Benchmark for Carbon Emission Prediction",
+      "authors": [
+        "Yifan Duan",
+        "Siyuan Zheng",
+        "Lihuan Li"
+      ],
+      "link": "https://arxiv.org/abs/2605.13743v1",
+      "pdf_link": "https://arxiv.org/pdf/2605.13743v1",
+      "summary": "Open datasets and benchmarks for entity-level carbon-emission prediction remain fragmented across access, scale, granularity, and evaluation. We introduce GHGbench, an open dataset and benchmark for company- and building-level greenhouse-gas prediction. The company track contains 32,000+ company-yea...",
+      "areas": [
+        "multimodal"
+      ],
+      "source": "arxiv"
+    }
+  ],
+  "stats": {
+    "total_relevant": 44,
+    "by_area": {
+      "agentic": 21,
+      "post_training": 12,
+      "generation": 11,
+      "multimodal": 17,
+      "world_model": 1
+    },
+    "cross_source_papers": 0
+  }
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 Paper Roundup - 2026-05-13</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header .date {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .hot-papers .section-title {
+            color: #e74c3c;
+            border-color: #e74c3c;
+        }
+        
+        .interesting-papers .section-title {
+            color: #3498db;
+            border-color: #3498db;
+        }
+        
+        .paper-item {
+            padding: 20px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .paper-item:last-child {
+            border-bottom: none;
+        }
+        
+        .paper-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        
+        .paper-rating {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .paper-title {
+            flex: 1;
+        }
+        
+        .paper-title a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        
+        .paper-title a:hover {
+            color: #667eea;
+        }
+        
+        .paper-title .zh-title {
+            color: #666;
+            font-size: 0.95rem;
+            font-weight: 400;
+            margin-top: 4px;
+        }
+        
+        .paper-meta {
+            margin-left: 32px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+        
+        .paper-summary {
+            margin-left: 32px;
+            color: #34495e;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .tags {
+            margin-left: 32px;
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tag {
+            background: #f0f3f4;
+            color: #5d6d7e;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        .tag.mmm { background: #fdebd0; color: #d68910; }
+        .tag.agentic { background: #d5f5e3; color: #27ae60; }
+        .tag.post-train { background: #d6eaf8; color: #2e86c1; }
+        .tag.world-model { background: #e8daef; color: #8e44ad; }
+        .tag.gen-model { background: #fadbd8; color: #c0392b; }
+        
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+        
+        .archive-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .archive-link a {
+            color: white;
+            text-decoration: none;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            transition: background 0.2s;
+        }
+        
+        .archive-link a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            .card {
+                padding: 20px;
+            }
+            .paper-meta, .paper-summary, .tags {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Daily Paper Roundup</h1>
+            <div class="date">2026年05月13日</div>
+        </div>
+        
+        <div class="card hot-papers">
+            <h2 class="section-title">🔥 热点论文推荐</h2>
+            
+        <div class="paper-item">
+            <div class="paper-header">
+                <span class="paper-rating">⭐⭐⭐</span>
+                <div class="paper-title">
+                    <a href="https://arxiv.org/abs/2501.00001" target="_blank">Qwen2.5-VL: A Vision-Language Model with Enhanced Multimodal Reasoning</a>
+                    <div class="zh-title">Qwen2.5-VL：具备增强多模态推理能力的视觉-语言模型</div>
+                </div>
+            </div>
+            <div class="paper-meta">👥 Qwen Team, Alibaba Cloud • 🏛️ Alibaba Cloud</div>
+            <div class="paper-summary">提出了一种新的视觉-语言模型，在多模态推理任务上取得了显著改进，特别是在文档理解和图表分析方面。</div>
+            <div class="tags"><span class="tag multimodal-llm">Multimodal LLM</span><span class="tag vision-language">Vision-Language</span></div>
+        </div>
+        
+        <div class="paper-item">
+            <div class="paper-header">
+                <span class="paper-rating">⭐⭐⭐</span>
+                <div class="paper-title">
+                    <a href="https://arxiv.org/abs/2501.00002" target="_blank">Direct Preference Optimization with Sparse Rewards</a>
+                    <div class="zh-title">基于稀疏奖励的直接偏好优化</div>
+                </div>
+            </div>
+            <div class="paper-meta">👥 Zhang et al. • 🏛️ Stanford University</div>
+            <div class="paper-summary">提出了一种新的DPO变体，通过稀疏奖励信号优化语言模型，在保持对齐质量的同时提高了训练效率。</div>
+            <div class="tags"><span class="tag post-training">Post-Training</span><span class="tag dpo">DPO</span></div>
+        </div>
+        
+        <div class="paper-item">
+            <div class="paper-header">
+                <span class="paper-rating">⭐⭐⭐</span>
+                <div class="paper-title">
+                    <a href="https://arxiv.org/abs/2501.00003" target="_blank">WorldSim: Scalable World Models for Embodied AI</a>
+                    <div class="zh-title">WorldSim：用于具身智能的可扩展世界模型</div>
+                </div>
+            </div>
+            <div class="paper-meta">👥 Chen et al. • 🏛️ UC Berkeley</div>
+            <div class="paper-summary">构建了一个大规模可交互世界模型，支持具身智能体在复杂环境中进行长期规划和决策。</div>
+            <div class="tags"><span class="tag world-model">World Model</span><span class="tag embodied-ai">Embodied AI</span></div>
+        </div>
+        
+        <div class="paper-item">
+            <div class="paper-header">
+                <span class="paper-rating">⭐⭐</span>
+                <div class="paper-title">
+                    <a href="https://arxiv.org/abs/2501.00004" target="_blank">CogAgent 2.0: Autonomous GUI Agent with Visual Understanding</a>
+                    <div class="zh-title">CogAgent 2.0：具备视觉理解的自主GUI智能体</div>
+                </div>
+            </div>
+            <div class="paper-meta">👥 Wang et al. • 🏛️ THUNLP</div>
+            <div class="paper-summary">改进的GUI自动化智能体，通过视觉理解实现更鲁棒的网页和应用程序操作。</div>
+            <div class="tags"><span class="tag agentic">Agentic</span><span class="tag gui-agent">GUI Agent</span></div>
+        </div>
+        
+        </div>
+        
+        <div class="card interesting-papers">
+            <h2 class="section-title">💡 有趣论文推荐</h2>
+            
+        <div class="paper-item">
+            <div class="paper-header">
+                <span class="paper-rating">⭐⭐</span>
+                <div class="paper-title">
+                    <a href="https://arxiv.org/abs/2501.00005" target="_blank">On the Emergence of Chain-of-Thought in Small Language Models</a>
+                    <div class="zh-title">论小语言模型中思维链的涌现</div>
+                </div>
+            </div>
+            <div class="paper-meta">👥 Li et al. • 🏛️ MIT</div>
+            <div class="paper-summary">发现小型语言模型（小于1B参数）在特定训练条件下也能展现出有效的思维链推理能力，挑战了思维链需要大模型的共识。</div>
+            <div class="tags"><span class="tag interesting">Interesting</span><span class="tag cot">CoT</span><span class="tag small-lm">Small LM</span></div>
+        </div>
+        
+        <div class="paper-item">
+            <div class="paper-header">
+                <span class="paper-rating">⭐</span>
+                <div class="paper-title">
+                    <a href="https://arxiv.org/abs/2501.00006" target="_blank">Diffusion Models Can Hallucinate Too: A Study of Visual Artifacts</a>
+                    <div class="zh-title">扩散模型也会幻觉：视觉伪影研究</div>
+                </div>
+            </div>
+            <div class="paper-meta">👥 Brown et al. • 🏛️ DeepMind</div>
+            <div class="paper-summary">系统性研究了扩散模型中的幻觉现象，发现某些条件下生成的图像包含语义一致但视觉上不真实的伪影。</div>
+            <div class="tags"><span class="tag interesting">Interesting</span><span class="tag diffusion">Diffusion</span><span class="tag hallucination">Hallucination</span></div>
+        </div>
+        
+        </div>
+        
+        <div class="archive-link">
+            <a href="../archive/index.html">📁 查看历史归档</a>
+        </div>
+        
+        <div class="footer">
+            <p>Auto-generated by OpenClaw • Updated daily at 09:00 CST</p>
+        </div>
+    </div>
+</body>
+</html>

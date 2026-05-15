@@ -1,0 +1,176 @@
+{
+  "date": "2026-05-15",
+  "sources": {
+    "arxiv": {
+      "status": "partial_success",
+      "total_fetched": "N/A (network_restricted)",
+      "note": "通过网络搜索获取arXiv论文信息，直接API访问受限"
+    },
+    "huggingface": {
+      "status": "network_restricted",
+      "method": "n/a",
+      "total_fetched": 0,
+      "note": "Web fetch和browser在当前环境不可用"
+    },
+    "paperswithcode": {
+      "status": "network_restricted",
+      "method": "n/a",
+      "total_fetched": 0,
+      "note": "Web fetch和browser在当前环境不可用"
+    }
+  },
+  "hot_papers": [
+    {
+      "title": "UniVidX: A Unified Multimodal Framework for Versatile Video Generation via Diffusion Priors",
+      "arxiv_id": "2605.00658",
+      "authors": "香港科技大学 MMLab 及合作团队",
+      "venue": "SIGGRAPH 2026",
+      "category": "视觉生成模型",
+      "keywords": [
+        "视频生成",
+        "扩散模型",
+        "多模态",
+        "统一框架"
+      ],
+      "summary": "面向多模态视频生成与理解的一体化统一框架，覆盖 Text→X、X→X 及 Text&X→X 三类核心范式。支持逆向渲染、重打光、RGBA生成、视频抠图与inpainting等任务，在多项视频图形任务上达到或刷新SOTA。",
+      "source": "quark_search",
+      "heat": "trending",
+      "url": "https://arxiv.org/pdf/2605.00658"
+    },
+    {
+      "title": "CodePercept: Code-Driven Visual Perception for MLLM STEM Reasoning",
+      "arxiv_id": "2603.10757",
+      "authors": "上海交通大学, Qwen团队",
+      "venue": "CVPR 2026",
+      "category": "多模态大语言模型",
+      "keywords": [
+        "代码感知",
+        "STEM推理",
+        "视觉感知",
+        "MLLM"
+      ],
+      "summary": "揭示当前MLLM在STEM领域推理能力受限的真正瓶颈是视觉感知而非推理能力。提出CodePercept范式，用代码重塑感知能力，打破自然语言的描述性失语。",
+      "source": "quark_search",
+      "heat": "trending",
+      "url": "https://arxiv.org/abs/2603.10757"
+    },
+    {
+      "title": "X2SAM: Unified Image and Video Segmentation via Multimodal LLM",
+      "arxiv_id": "2605.00891",
+      "authors": "中山大学, 鹏城实验室, 美团",
+      "venue": "arXiv 2026",
+      "category": "多模态大语言模型",
+      "keywords": [
+        "分割",
+        "视频理解",
+        "统一框架",
+        "多模态"
+      ],
+      "summary": "统一分割多模态大语言模型，将图片与视频分割任务统一在同一框架下，支持文本和视觉双模态提示，覆盖通用分割、指代分割、推理分割等14种任务。",
+      "source": "quark_search",
+      "heat": "trending",
+      "url": "https://arxiv.org/abs/2605.00891"
+    },
+    {
+      "title": "SciFi: Safe, Lightweight, User-Friendly Agentic AI for Scientific Applications",
+      "arxiv_id": "N/A",
+      "authors": "未注明",
+      "venue": "arXiv 2026",
+      "category": "Agentic AI",
+      "keywords": [
+        "智能体",
+        "科学研究",
+        "安全",
+        "自主工作流"
+      ],
+      "summary": "面向科学应用的Agentic AI工作流，结合隔离执行环境、三层智能体循环和自评估do-until机制，实现可靠部署于真实科学研究场景。",
+      "source": "quark_search",
+      "heat": "trending",
+      "url": ""
+    },
+    {
+      "title": "TBA: Trajectory Balance with Asynchrony for Fast LLM Post-Training",
+      "arxiv_id": "2503.18929",
+      "authors": "Yoshua Bengio团队",
+      "venue": "NeurIPS 2025",
+      "category": "模型后训练",
+      "keywords": [
+        "异步训练",
+        "强化学习",
+        "后训练",
+        "Trajectory Balance"
+      ],
+      "summary": "解耦探索与学习的异步框架，将后训练拆分为Searcher（生成轨迹）和Trainer（持续更新）两条流水线，相比异步DPO基线快3.8-5.3倍。",
+      "source": "quark_search",
+      "heat": "trending",
+      "url": "https://arxiv.org/abs/2503.18929"
+    }
+  ],
+  "interesting_papers": [
+    {
+      "title": "BARD-VL: Multimodal Diffusion Model with Qwen3-VL",
+      "arxiv_id": "2604.16514",
+      "authors": "上海科学智能研究院, 复旦, 创智学院",
+      "venue": "arXiv 2026",
+      "category": "多模态大语言模型",
+      "keywords": [
+        "扩散模型",
+        "视觉语言模型",
+        "并行解码",
+        "加速"
+      ],
+      "summary": "将自回归VLM转换为Diffusion VLM，保持性能同时解码吞吐量最高提升3倍，解决长输出场景的速度瓶颈问题。",
+      "source": "quark_search",
+      "heat": null,
+      "url": "https://arxiv.org/pdf/2604.16514"
+    },
+    {
+      "title": "PhysicianBench: AI Clinical Task Evaluation in Real EHR Environment",
+      "arxiv_id": "2605.02240",
+      "authors": "斯坦福大学医学信息学团队",
+      "venue": "arXiv 2026",
+      "category": "Agentic AI",
+      "keywords": [
+        "医疗AI",
+        "电子病历",
+        "临床评测",
+        "智能体"
+      ],
+      "summary": "首个将AI置于真实电子病历环境进行长流程临床任务评测的基准。100道真实医院会诊案例，最强模型GPT-5.5单次通过率仅46.3%，揭示AI距离临床自主工作能力仍有相当差距。",
+      "source": "quark_search",
+      "heat": null,
+      "url": "https://arxiv.org/abs/2605.02240"
+    },
+    {
+      "title": "Stream-R1: Reward-Guided Distillation for Video Generation",
+      "arxiv_id": "2605.03849",
+      "authors": "中科大, FrameX.AI",
+      "venue": "arXiv 2026",
+      "category": "视觉生成模型",
+      "keywords": [
+        "视频生成",
+        "知识蒸馏",
+        "奖励引导",
+        "扩散模型"
+      ],
+      "summary": "引入奖励模型对训练样本进行双重加权：样本层面根据质量分数筛选可靠信号，像素与帧层面通过梯度显著性热力图集中优化最需改进区域，4步学生模型在VBench多项指标上超越多步教师模型。",
+      "source": "quark_search",
+      "heat": null,
+      "url": "https://arxiv.org/abs/2605.03849"
+    }
+  ],
+  "stats": {
+    "total_papers": 8,
+    "sources_active": 1,
+    "network_issue": true,
+    "search_method": "quark_search (web_search)",
+    "hot_papers_count": 5,
+    "interesting_papers_count": 3,
+    "categories": {
+      "多模态大语言模型": 3,
+      "Agentic AI": 2,
+      "模型后训练": 1,
+      "视觉生成模型": 2
+    }
+  }
+}
