@@ -17,15 +17,15 @@
             <h2>📊 统计</h2>
             <div class="stat-cards">
                 <div class="stat-card">
-                    <span class="stat-number">10</span>
+                    <span class="stat-number">1</span>
                     <span class="stat-label">总论文数</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">4</span>
+                    <span class="stat-number">0</span>
                     <span class="stat-label">热榜论文</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">6</span>
+                    <span class="stat-number">1</span>
                     <span class="stat-label">精选论文</span>
                 </div>
                 <div class="stat-card">
@@ -36,194 +36,27 @@
         </section>
 
         <section class="latest">
-            <h2>🔥 热榜论文 (4篇)</h2>
-            <div>
-        <div class="paper-card hot">
-            <div class="paper-header">
-                <a href="https://blog.csdn.net/m0_75253087/article/details/161049756" target="_blank" class="paper-title">2026年主流LLM CoT已内建于LangChain Agent</a>
-                <div class="paper-badges"><span class="badge hot">🔥 Hot</span><span class="badge category">Agentic AI</span></div>
-            </div>
-            <div class="paper-meta"></div>
-            <div class="paper-summary">Agent类型
-内置推理范式
-核心提示结构
-适用场景
-ZERO_SHOT_REACT_DESCRIPTION ReAct (CoT + Tool Use) 包含明确的  Thought: 、 Action: 、 Observation: 、 Final Answer:  占位符，强制模型进行工具调用前的推理
-Agent会自动执行CoT推理。
-result = agent.run( &quot;请搜索‘2026年AI Agent发展趋势’，并总结三点。&quot; )
-# 控制台将输出类似：
-# Thought: 用户需要我搜索信息并总结。我需要先使用Search工具。
-# Action: Search
-# Action Input: 2026年AI Agent发展趋势
-# Observation: 关于&#x27;2026年AI Agent发展趋势&#x27;的搜索结果：...
-# Thought: 根据搜索结果，我可以总结出三点趋势...
-# Final Answer: 1. ...</div>
-            <div class="paper-keywords"><span class="keyword">Tool Use</span><span class="keyword">Agent</span></div>
-        </div>
-        
-        <div class="paper-card hot">
-            <div class="paper-header">
-                <a href="https://news.sina.cn/j_uc.d.html?docid=mzituza4877318" target="_blank" class="paper-title">GPT之后下一个热点！硅谷大佬为啥追捧AI Agent？手机新浪网</a>
-                <div class="paper-badges"><span class="badge hot">🔥 Hot</span><span class="badge category">Agentic AI</span></div>
-            </div>
-            <div class="paper-meta"></div>
-            <div class="paper-summary">OpenAI安全系统负责人Lilian Weng撰写了一篇关于AI Agent的博客，详细描述了AI Agent的基本概念与核心原理。
-简单说， AI 聊天机器人主要靠 “ 说 ” 来回答你的问题，而 AI Agent 则会 “ 动 ” 起来完成具体的任务，就像人类助理一样，在你忙不过来的时候替你完成一些工作，区别就是用 AI 来驱动而不是人脑驱动。
-从原理上说， AI Agent 的核心驱动力是大模型，在此基础上增加规划（ Planning ）、记忆（ Memory ）和工具使用（ Tool Use ）三个关键组件。
-大模型已经很聪明了，为什么还要增加三个组件呢？
-这是因为，大模型仍然有一些缺陷，不仅能力固化，还记不住新信息，难以完成相对复杂的任务，而这三个组件是为了让大模型能够执行更加复杂的任务。
-首先，复杂任务往往难以一步到位，所以需要“规划”组件来负责任务分解，将总任务拆分为各项子任务，也就是“分活儿”。
-在这之后就是执行，但GPT-4等大模型记不住多次对话，这就需要增加“记忆”组件，就像给它装上人类的海马体，让它时刻记着任务内容，防止跑偏。
-另外，当任务需求超出大模型自...</div>
-            <div class="paper-keywords"><span class="keyword">Tool Use</span><span class="keyword">工具使用</span><span class="keyword">规划</span><span class="keyword">Agent</span></div>
-        </div>
-        
-        <div class="paper-card hot">
-            <div class="paper-header">
-                <a href="https://blog.51cto.com/u_17703861/14597393" target="_blank" class="paper-title">EvoLM：8B 模型自写评分标准，RL 后超越 GPT-4</a>
-                <div class="paper-badges"><span class="badge hot">🔥 Hot</span><span class="badge category">Post-Training</span></div>
-            </div>
-            <div class="paper-meta"></div>
-            <div class="paper-summary">©著作权归作者所有：来自51CTO博客作者大模型最新论文的原创作品，请联系作者获取转载授权，否则将追究法律责任 
-一句话总结
-RL 训练 policy model 的同时让他写评分准则，效果比 GPT-4 还好
-论文标题 : EvoLM: Self-Evolving Language Models through
-它不可替代的价值在于：SFT 只能&quot;照葫芦画瓢&quot;，能力上限被标注数据死死锁住；RL 用奖励信号&quot;指点&quot;模型自己去探索，可以做出比标注更好的回答，从而突破训练数据的天花板，这是 SFT 永远做不到的
-1.2 瓶颈是奖励信号
-实际跑过 RL 训练的人都知道，这玩意比 SFT 难训得多 —— 卡得最死的不是模型架构
-评分标准被压缩进权重黑箱，不可解释，最容易被 reward hacking
-四种方法都默认了一个共同假设：奖励必须从模型外部拿，要有一个比模型自己更强的&quot;外部裁判&quot;。</div>
-            
-        </div>
-        
-        <div class="paper-card hot">
-            <div class="paper-header">
-                <a href="https://www.51cto.com/article/843317.html" target="_blank" class="paper-title">当SFT遇上RL：基于样本学习阶段的动态策略优化机制</a>
-                <div class="paper-badges"><span class="badge hot">🔥 Hot</span><span class="badge category">Post-Training</span></div>
-            </div>
-            <div class="paper-meta"></div>
-            <div class="paper-summary">研究团队提出了DYPO（Dynamic Policy Optimization） 动态策略优化方法。
-过去一段时间里，在围绕大模型推理能力增强的研究中，SFT 和 RL 是两类核心后训练范式 —— 前者稳定收敛快，能高效吸收高质量推理数据；后者更具探索性，有望推动模型实现复杂推理和分布外泛化。
-但在实际训练中，这两种信号却难以有效融合，现有工作大多仅停留在 “把两个loss混在一起” 的层面。
-为应对这一挑战，研究团队提出了 DYPO（Dynamic Policy Optimization）  动态策略优化方法。
-核心思考在于：既然 SFT 和 RL 的学习信号统计性质天然不同，统一优化要如何做，才能既保留监督学习的稳定性，又不牺牲强化学习的探索能力？
-△ 图1：DYPO的整体框架
-如图1，模型会先根据一组rollout的结果判断样本所处的学习阶段，再决定它应该走监督路径、强化学习路径，还是暂时跳过。
-SFT和RL为什么很难真正协同
-如果把大模型后训练比作“教学生做题”，SFT 和 RL 的特性差异便一目了然。
-SFT 更像老师直接讲标准答案。它的优点是学得快、过程稳、收敛也更容...</div>
-            
-        </div>
-        </div>
+            <h2>🔥 热榜论文 (0篇)</h2>
+            <div><p class="loading">暂无论文</p></div>
         </section>
 
         <section class="latest">
-            <h2>💡 精选论文 (6篇)</h2>
+            <h2>💡 精选论文 (1篇)</h2>
             <div>
         <div class="paper-card ">
             <div class="paper-header">
-                <a href="https://www.aminer.cn/profile/haoji-hu/63156dadcd729caec636383d" target="_blank" class="paper-title">Department of Information and Communication College of Information Science and Electronic Engineering, Zhejiang University</a>
-                <div class="paper-badges"><span class="badge category">Multimodal LLM</span></div>
+                <a href="https://arxiv.org/list/cs.CV/recent?show=2000&amp;skip=167" target="_blank" class="paper-title">Computer Vision and Pattern Recognition</a>
+                <div class="paper-badges"><span class="badge category">Post-Training</span></div>
             </div>
             <div class="paper-meta"></div>
-            <div class="paper-summary">(2025)
-Cited 155 Views 14 Bibtex
-ST^3: Accelerating Multimodal Large Language Model by Spatial-Temporal Visual Token Trimming
-Jiedong Zhuang , Lu , Ming
-Dai , Rui Hu , Jian Chen , Qiang Liu , Haoji Hu
-AAAI 2025no. 10 (2025): 11049-11057
-Cited 24 Views 18 Bibtex
-Optimizing Backbone Networks Through Hybrid–Modal
-, Yuanbo Yang , Hao Ouyang , Haoji Hu , Huimin Yu , Yujun Shen , Yiyi Liao
-NeurIPS 2025 (2025)
-Cited 4 Views 11 Bibtex
-SemiGMMPoint: Semi-supervised Point</div>
-            
-        </div>
-        
-        <div class="paper-card ">
-            <div class="paper-header">
-                <a href="https://www.techbeat.net/article-info?id=5655" target="_blank" class="paper-title">Google DeepMind最新研究，将视觉语言大模型作为强化学习的全新奖励来源</a>
-                <div class="paper-badges"><span class="badge category">Multimodal LLM</span></div>
-            </div>
-            <div class="paper-meta"></div>
-            <div class="paper-summary">论文链接： TorchUMM: A Unified Multimodal...
-CuriousVLA 揭示了 MLLM 自回归在自动驾驶中的探索坍塌问题，并通过多样性驱动训练释放多模态大模型在自动驾驶中的 Scaling 潜力。
-面对时长从几分钟到数小时的长视频，现有多模态视频语言模型（Large Video-Language Models, LVLMs）却因上下文窗口有限、视觉-文本对齐不足等问题屡屡 “失灵”，要么需海量数据与 GPU 资源进行微调，要么依赖 GPT-4o 等闭源模型导致成本难以承担。
-为了回应这一挑战，我们荣幸地推出被 NeurIPS 2025 会议接收为Spotlight 的最新研究成果——...</div>
-            <div class="paper-keywords"><span class="keyword">MLLM</span><span class="keyword">多模态</span></div>
-        </div>
-        
-        <div class="paper-card ">
-            <div class="paper-header">
-                <a href="https://m.blog.csdn.net/weixin_43726381/article/details/161098993" target="_blank" class="paper-title">2026京东健康AI Agent工程师面试题库：一二三面完整答案（Java技术栈）</a>
-                <div class="paper-badges"><span class="badge category">Agentic AI</span></div>
-            </div>
-            <div class="paper-meta"></div>
-            <div class="paper-summary">AI Agent 在垂直领域的落地。
-零样本/少样本泛化，处理未见过的输入
-交互方式 结构化输入（表单/API） 自然语言，可多轮追问澄清
-学习方式 静态，人工更新规则 可从交互中学习（RLHF/RL）
-工具使用 固定 API 集成，编码层面 自主判断并调用外部工具（Tool Use）
-容错能力 遇到异常直接失败 可通过推理补偿、尝试替代方案
-比如用户说&quot;我这两天头有点晕&quot;，Agent 需要理解这不是&quot;头晕&quot;的字面意思，而是可能涉及血压、血糖、耳石症等多种健康问题。
-第二层：推理（Reasoning &amp; Planning） ——基于理解，自主拆解任务、规划步骤、调用工具。</div>
-            <div class="paper-keywords"><span class="keyword">Tool Use</span><span class="keyword">工具使用</span><span class="keyword">规划</span><span class="keyword">Agent</span></div>
-        </div>
-        
-        <div class="paper-card ">
-            <div class="paper-header">
-                <a href="https://m.toutiao.com/article/7639674857436758574/" target="_blank" class="paper-title">AI 从&quot;工具&quot;变成了&quot;同事&quot;，什么是 Agentic AI？</a>
-                <div class="paper-badges"><span class="badge category">Agentic AI</span></div>
-            </div>
-            <div class="paper-meta"></div>
-            <div class="paper-summary">用一句话概括：工具型 AI 是&quot;给答案的机器&quot;，Agentic AI 是&quot;完成任务的系统&quot;。
-这个转变建立在三个核心特征上：
-特征一：自主规划（Planning）
-Agentic AI 接到任务后，不会直接输出答案。它会先拆解任务：&quot;要完成这件事，我需要做哪些步骤？每个步骤之间有什么依赖关系？哪些可以并行？&quot;
-这个规划过程本身由语言模型完成，输出的不是文字，而是一份执行计划。就像一个新来的实习生，接到&quot;帮我整理这份市场报告&quot;的任务后，不会立刻瞎写，而是先想清楚：需要哪些数据来源、搜索哪些关键词、报告的框架是什么。
-特征二：工具使用（Tool Use）
-语言模型本身只能处理和输出文字。要让它能订机票、查天气、读文件、写代码并运行，需要给它配备&quot;工具&quot;——预先定义好的函数接口，模型决定什么时候调用哪个工具，传入什么参数。
-这套机制通常叫做 Function Calling 或 Tool Use。模型输出结构化的调用指令，外部系统执行，把结果返回给模型，模型再决定下一步怎么做。工具可以是：搜索引擎、数据库查询、代码执行器、邮件客户端、CRM 系统，几乎任何有 API 的系统都能接入。
-...</div>
-            <div class="paper-keywords"><span class="keyword">Tool Use</span><span class="keyword">工具使用</span><span class="keyword">规划</span><span class="keyword">Agent</span></div>
-        </div>
-        
-        <div class="paper-card ">
-            <div class="paper-header">
-                <a href="https://blog.51cto.com/u_16213577/14598657" target="_blank" class="paper-title">拒绝纸上谈兵！全面解析 hello-agents：从零开始构建智能体（AI Agent）</a>
-                <div class="paper-badges"><span class="badge category">Agentic AI</span></div>
-            </div>
-            <div class="paper-meta"></div>
-            <div class="paper-summary">阶段
-核心模块
-学习要点
-基础篇
-Agent 核心原理
-理解感知 (Perception)、决策 (Planning) 与执行 (Action) 的闭环。
-能力篇
-核心组件拆解
-深度学习 Prompt Engineering、Tool Use（工具调用）与 RAG（检索增强）。
-只要你会基础的 Python，就能通过调用 API 的方式，理解 Agent 是如何通过“思维链（CoT）”来解决问题的。
-2. 聚焦 ReAct 范式
-项目深入剖析了  Reasoning + Acting (ReAct)  这一 Agent 领域的核心范式。
-二、Step 1：环境搭建（Maven/Gradle）引入 Spring AI BOM（统一版本）三、Step 2：开发智能体可调用的工具（Tool）智能体
- 环境搭建   持久化   解决方案   Spring AI   智能体 
- 提到AI，很多人想到的是实验室里的论文、复杂的公式，或是企业里“用不上</div>
-            <div class="paper-keywords"><span class="keyword">Tool Use</span><span class="keyword">智能体</span><span class="keyword">Agent</span></div>
-        </div>
-        
-        <div class="paper-card ">
-            <div class="paper-header">
-                <a href="https://m.blog.csdn.net/2601_96023685/article/details/161075235" target="_blank" class="paper-title">深度理解AI Agent底层架构与核心原理</a>
-                <div class="paper-badges"><span class="badge category">Agentic AI</span></div>
-            </div>
-            <div class="paper-meta"></div>
-            <div class="paper-summary">近年来，“AI  Agent ”（人工智能智能体）成为技术圈最热的话题之一。从 AutoGPT 到各种能自动写报告、订机票、操作软件的个人助手，它们仿佛一夜之间拥有了“动手能力”。但很多人对 Agent 的理解仍停留在“调个 API 然后生成文本”的层面。究竟什么是 AI Agent？它的大脑如何构建？为什么它能自主完成复杂任务？本文将以 最通俗的语言 ，结合 代码级别的拆解 ，为你彻底讲透 AI Agent 的底层  架构  与核心原理，全程无广告、无软推，纯技术分享。
-阅读收获 ：你将理解 Agent 的“感知-规划-记忆-行动”四要素，掌握 ReAct、CoT 等经典推理模式，看懂一个最小 Agent 的实现代码，并学会如何评估 Agent 的可靠性。全文 7000+ 字，适合零基础小白入门，也适合开发者深化认知。
-一、到底什么是AI Agent？从“聊天机器人”到“行动派”
-传统的大型语言  模型  （如 ChatGPT）本质上是一个 “文本生成器” ：你输入一段话，它输出续写的文本。它可以回答问题、写诗、翻译，但 它不会采取实际行动 ——比如帮你发一封邮件、查询  数据...</div>
-            <div class="paper-keywords"><span class="keyword">规划</span><span class="keyword">智能体</span><span class="keyword">Agent</span></div>
+            <div class="paper-summary">Generation 
+Comments:  Code is available at  
+Subjects: Computer Vision and Pattern Recognition (cs.CV) ; Artificial Intelligence (cs.AI) 
+Title:  Offline Preference
+Optimization for Rectified Flow with Noise-Tracked Pairs 
+Comments:  Accepted by ICML 2026 
+Subjects: Computer Vision and Pattern Recognition (cs.CV)</div>
+            <div class="paper-keywords"><span class="keyword">preference</span></div>
         </div>
         </div>
         </section>

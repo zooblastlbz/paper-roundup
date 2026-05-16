@@ -17,13 +17,13 @@ DAILY_DIR = BASE_DIR / "daily"
 DATA_DIR = BASE_DIR / "data"
 DOCS_DIR = BASE_DIR / "docs"
 
-# 搜索查询配置
+# 搜索查询配置 - 聚焦 arXiv 论文
 SEARCH_QUERIES = [
-    ("multimodal large language model MLLM arxiv 2025", "Multimodal LLM"),
-    ("AI agent tool use reasoning planning arxiv", "Agentic AI"),
-    ("DPO RL reward model SFT training arxiv", "Post-Training"),
-    ("world model AI arxiv", "World Model"),
-    ("diffusion model video generation arxiv", "Visual Generation"),
+    ("site:arxiv.org multimodal large language model MLLM 2025", "Multimodal LLM"),
+    ("site:arxiv.org AI agent tool use reasoning planning", "Agentic AI"),
+    ("site:arxiv.org DPO direct preference optimization RLHF", "Post-Training"),
+    ("site:arxiv.org world model latent dynamics", "World Model"),
+    ("site:arxiv.org diffusion model video generation 2025", "Visual Generation"),
 ]
 
 
@@ -44,21 +44,53 @@ def run_quark_search(query, days=3, max_results=8):
         return {"results": []}
 
 
-def extract_arxiv_info(text):
+def extract_arxiv_info(text, link=""):
     """从搜索结果中提取 arXiv ID 和其他信息"""
-    arxiv_pattern = r'arXiv[:\s]*(\d{4}\.\d{4,5})'
-    match = re.search(arxiv_pattern, text, re.IGNORECASE)
-    arxiv_id = match.group(1) if match else None
+    # 优先从链接提取 arXiv ID
+    url_patterns = [
+        r'https?://arxiv\.org/abs/(\d{4}\.\d{4,5})',
+        r'https?://arxiv\.org/pdf/(\d{4}\.\d{4,5})',
+        r'arxiv\.org/abs/(\d{4}\.\d{4,5})',
+    ]
     
-    # 提取链接
-    url_pattern = r'https?://arxiv\.org/abs/(\d{4}\.\d{4,5})'
-    url_match = re.search(url_pattern, text)
-    if url_match and not arxiv_id:
-        arxiv_id = url_match.group(1)
+    arxiv_id = None
+    for pattern in url_patterns:
+        match = re.search(pattern, link)
+        if match:
+            arxiv_id = match.group(1)
+            break
     
-    url = f"https://arxiv.org/abs/{arxiv_id}" if arxiv_id else ""
+    # 如果没找到，从文本中找
+    if not arxiv_id:
+        arxiv_pattern = r'arXiv[:\s]*(\d{4}\.\d{4,5})'
+        match = re.search(arxiv_pattern, text, re.IGNORECASE)
+        arxiv_id = match.group(1) if match else None
+    
+    url = f"https://arxiv.org/abs/{arxiv_id}" if arxiv_id else link
     return arxiv_id, url
 
+
+def is_valid_paper(title, link, snippet):
+    """过滤掉博客文章，只保留 arXiv 论文"""
+    # 必须包含 arxiv.org
+    if "arxiv.org" not in link.lower():
+        return False
+    
+    # 排除常见的博客/新闻网站
+    blocked_domains = [
+        "csdn.net", "blog.51cto.com", "toutiao.com", "sina.com", 
+        "sina.cn", "techbeat.net", "zhihu.com", "weixin.qq.com",
+        "aminer.cn", "baijiahao.baidu.com", "jianshu.com"
+    ]
+    for domain in blocked_domains:
+        if domain in link.lower():
+            return False
+    
+    # 标题不能太短
+    if len(title) < 30:
+        return False
+    
+    return True
 
 def process_paper_item(item, category):
     """处理单个搜索结果，转换为标准论文格式"""
@@ -68,36 +100,47 @@ def process_paper_item(item, category):
     link = item.get("link", "")
     published = item.get("published_time", "")
     
+    # 过滤非论文内容
+    if not is_valid_paper(title, link, snippet):
+        return None
+    
     # 提取 arXiv ID
     combined_text = f"{title} {snippet} {link}"
-    arxiv_id, arxiv_url = extract_arxiv_info(combined_text)
+    arxiv_id, arxiv_url = extract_arxiv_info(combined_text, link)
     
-    if not arxiv_id and "arxiv" in link.lower():
+    if not arxiv_id:
         # 尝试从链接提取
         arxiv_match = re.search(r'(\d{4}\.\d{4,5})', link)
         if arxiv_match:
             arxiv_id = arxiv_match.group(1)
             arxiv_url = f"https://arxiv.org/abs/{arxiv_id}"
     
-    # 生成摘要
-    summary = snippet if snippet else main_text[:300] if main_text else "暂无摘要"
+    # 清理标题 - 去掉网站名后缀
+    title = re.sub(r'\s*[-|]\s*(arxiv\.org|arxiv).*', '', title, flags=re.IGNORECASE)
+    title = re.sub(r'\s*\|\s*[^|]*(?:blog|news|tech).*', '', title, flags=re.IGNORECASE)
+    
+    # 生成摘要 - 优先使用 main_text (更完整)
+    summary = main_text[:500] if main_text else snippet
+    if not summary:
+        summary = "暂无摘要"
     if len(summary) > 500:
         summary = summary[:497] + "..."
     
     # 生成关键词（从标题和摘要提取）
     keywords = []
     keyword_map = {
-        "Multimodal LLM": ["多模态", "视觉语言模型", "MLLM", "Vision Language"],
-        "Agentic AI": ["智能体", "Agent", "工具使用", "Tool Use", "规划"],
-        "Post-Training": ["DPO", "RLHF", "对齐", "偏好优化", "奖励模型"],
-        "World Model": ["世界模型", "World Model", "动态模型", "想象"],
-        "Visual Generation": ["扩散模型", "Diffusion", "图像生成", "视频生成"]
+        "Multimodal LLM": ["multimodal", "vision", "MLLM", "visual language"],
+        "Agentic AI": ["agent", "tool use", "reasoning", "planning"],
+        "Post-Training": ["DPO", "RLHF", "alignment", "preference", "reward"],
+        "World Model": ["world model", "latent dynamics", "imagination"],
+        "Visual Generation": ["diffusion", "video generation", "image synthesis"]
     }
     
+    combined = (title + " " + summary).lower()
     for kw in keyword_map.get(category, []):
-        if kw.lower() in (title + summary).lower():
+        if kw.lower() in combined:
             keywords.append(kw)
-    keywords = list(set(keywords))[:4]  # 最多4个，去重
+    keywords = list(set(keywords))[:4]
     
     return {
         "title": title,
@@ -107,7 +150,7 @@ def process_paper_item(item, category):
         "category": category,
         "published_time": published,
         "keywords": keywords,
-        "source": "quark_search"
+        "source": "arxiv"
     }
 
 
@@ -125,7 +168,7 @@ def search_all_papers():
             
             for item in papers:
                 paper = process_paper_item(item, category)
-                if paper["title"] and len(paper["title"]) > 20:  # 过滤无效结果
+                if paper and paper["title"] and len(paper["title"]) > 20:
                     all_papers.append(paper)
                     category_stats[category] += 1
             
