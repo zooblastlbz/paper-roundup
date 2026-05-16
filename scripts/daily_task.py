@@ -162,7 +162,7 @@ def search_all_papers():
     for query, category in SEARCH_QUERIES:
         print(f"🔍 Searching: {category} ...")
         try:
-            results = run_quark_search(query, days=3, max_results=8)
+            results = run_quark_search(query, days=7, max_results=15)
             papers = results.get("results", [])
             category_stats[category] = 0
             
